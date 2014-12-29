@@ -1,0 +1,33 @@
+\documentclass[14pt]{extarticle}
+\begin{document}
+	\paragraph{Question/Claim}
+	Prove that for any integer n, at least one of the integers $n, n+2, n+4$ is divisible by 3.
+	\paragraph{Proof} By Division Theorem and definition of divisibility.
+	\par\bigskip
+	Let arbitrary $n \in \mathcal{Z}$ be given.  By the Division Theorem, $n$ can be expressed in one of the forms:
+	\begin{equation}\label{eq:1}
+	3m, 3m+1, 3m+2, m \in \mathcal{Z}.
+	\end{equation}
+	We shall prove the claim by examining each possible form of $n$ in (\ref{eq:1}).
+	\paragraph{Case 1} Assume $n=3m$.  Hence, $n$ is divisible by 3 since $a=m$ satisfies the following divisibility definition:
+	\begin{center}
+	$(\exists a \in \mathcal{Z})(3a=n)$
+	\end{center}
+	\paragraph{Case 2} Assume $n=3m+1$.  This implies:
+	\begin{center}
+	$n+2 = 3m+1+2 = 3(m+1)$	
+	\end{center}
+	Hence, $n+2$ is divisible by 3 since $a=m+1$ satisfies the following divisibility definition:
+	\begin{center}
+	$(\exists a \in \mathcal{Z})(3a=n+2)$
+	\end{center}
+	\paragraph{Case 3} Assume $n=3m+2$.  This implies:
+	\begin{center}
+		$n+4 = 3m+2+4 = 3(m+2)$	
+	\end{center}
+	Hence, $n+4$ is divisible by 3 since $a=m+2$ satisfies the following divisibility definition:
+	\begin{center}
+	$(\exists a \in \mathcal{Z})(3a=n+4)$
+	\end{center}
+	From the three cases above, for any integer $n$, at least one of the integers $n, n+2, n+4$ is divisible by 3.
+\end{document}

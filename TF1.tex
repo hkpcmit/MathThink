@@ -1,0 +1,41 @@
+\documentclass[14pt]{extarticle}
+\begin{document}
+	\paragraph{Question}
+	Say whether the following is true or false and support your answer by a proof. $(\exists m \in \mathcal{N})(\exists n \in \mathcal{N})(3m+5n=12)$
+	\paragraph{Claim}
+	$(\exists m \in \mathcal{N})(\exists n \in \mathcal{N})(3m+5n=12)$ is false.
+	\paragraph{Proof} By contradiction.
+	\par\bigskip
+	Assume the following claim is true:
+	\begin{equation}\label{eq:0}
+	(\exists m \in \mathcal{N})(\exists n \in \mathcal{N})(3m+5n=12) 
+	\end{equation}
+	Observe that, since natural numbers are positive:
+	\begin{equation}\label{eq:1}
+	3m > 0, 5n > 0
+	\end{equation}
+	Also note that $3m < 12$.  Otherwise, $5n = 12-3m \le 0$, which contradicts (\ref{eq:1}).  Hence, the possible values of $m$ is:
+	\begin{center}
+	$\{m | m \in \mathcal{N}, 0 < 3m < 12\} = \{1, 2, 3\}$
+	\end{center}
+	\paragraph{Case 1} Assume that $m=1$ satisfies (\ref{eq:0}).  The claim is equivalent to:
+	\begin{center}
+	$(\exists n \in \mathcal{N}) (5n = 12-3(1) = 9)$
+	\end{center}
+	This is not true since 9 is not divisible by 5.  In light of this contradiction, $m=1$ does not satisfy (\ref{eq:0}).
+	\paragraph{Case 2} Assume that $m=2$ satisfies (\ref{eq:0}).  The claim is equivalent to:
+	\begin{center}
+	$(\exists n \in \mathcal{N}) (5n = 12-3(2) = 6)$
+	\end{center}
+	This is also not true since 6 is not divisible by 5.  In light of this contradiction, $m=2$ does not satisfy (\ref{eq:0}).
+	\paragraph{Case 3} Assume that $m=3$ satisfies (\ref{eq:0}).  The claim is equivalent to:
+	\begin{center}
+		$(\exists n \in \mathcal{N}) (5n = 12-3(3) = 3)$
+	\end{center}
+	This is also not true since 3 is not divisible by 5.  In light of this contradiction, $m=3$ does not satisfy (\ref{eq:0}).
+	\par\bigskip
+	From all cases above, there is no pair of natural numbers $m, n$ that satisfies (\ref{eq:0}).  In light of this contradiction, the following statement must be false:
+	\begin{center}
+	$(\exists m \in \mathcal{N})(\exists n \in \mathcal{N})(3m+5n=12)$
+	\end{center}
+\end{document}

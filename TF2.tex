@@ -1,0 +1,24 @@
+\documentclass[14pt]{extarticle}
+\begin{document}
+	\paragraph{Question}
+	Say whether the following is true or false and support your answer by a proof: The sum of any five consecutive integers is divisible by 5 (without remainder).
+	\paragraph{Claim} The sum of any five consecutive integers is divisible by 5.
+	\paragraph{Proof} By algebra and definition of divisibility.
+	\par\bigskip
+	For any arbitrary consecutive 5 integers, let $n \in \mathcal{Z}$ be the smallest integer among them.  In other words, the 5 consecutive integers are:
+	\begin{center} $n, n+1, n+2, n+3, n+4$. 
+	\end{center}
+	\par
+	We shall show that $5|\sum\limits_{i=n}^{n+4} i$ is true or
+	\par\begin{equation}\label{eq:1}
+	(\exists m \in \mathcal{Z}) (5m = \sum\limits_{i=n}^{n+4} i)
+	\end{equation}
+	\par\bigskip\begin{center}
+	$\sum\limits_{i=n}^{n+4} i= n+n+1+n+2+n+3+n+4$\par
+	$=5n+10=5(n+2)$
+	\end{center}
+	\par\bigskip
+	Let $m = n+2$.  Clearly, $m$ is an integer and satisfies (\ref{eq:1}).  Hence by definition of divisibility, $(\forall n \in \mathcal{Z})(5|\sum\limits_{i=n}^{n+4}i)$.
+	In other words, the sum of any five consecutive integers is divisible by 5.
+	
+\end{document}

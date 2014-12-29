@@ -1,0 +1,90 @@
+\documentclass[14pt]{extarticle}
+\begin{document}
+	\paragraph{Question} Given an infinite collection $A_n, n=1,2, ...$ of intervals of the real line, their intersection is defined to be $\cap_{n=1}^\infty A_n=\{x|(\forall n)(x\in A_n)\}$ Give an example of a family of intervals $A_n, n=1,2, ...$, such that $A_{n+1} \subset A_n$ for all $n$ and $\cap_{n=1}^\infty A_n=\emptyset$. Prove that your example has the stated property.
+	\par\bigskip
+	Let $A_n = \{x|x \in \mathcal{R}, 0 < x \le \frac{1}{n}\}, n \in \mathcal{N}$.  We shall prove the following claims:
+	\begin{enumerate}
+		\item $A_{n+1} \subset A_n$.\label{claim1}
+		\item $\cap_{n=1}^\infty A_n=\emptyset$.
+	\end{enumerate}
+	\section{Proof of Claim \ref{claim1}} Proof by definition of proper subset.
+	\par\bigskip
+	Clearly, $\frac{1}{n+1} < \frac{1}{n}$.  For all $x \in A_{n+1}$, the following inequality holds:
+	\begin{center}
+	$0 < x \le \frac{1}{n+1} < \frac{1}{n}$
+	\end{center}
+	This shows that all members of $A_{n+1}$ is contained in $A_n$ by the definition of $A_n$ and $A_{n+1}$.  At the same time, due to the strict inequality, not all members of $A_n$ is contained in $A_{n+1}$.  In particular, for all $y$ that satisfies:
+	\begin{center}
+		$ \frac{1}{n+1} < y \le \frac{1}{n}$
+	\end{center}
+	$y \in A_n$ and $y \notin A_{n+1}$.	 Hence by definition of proper subset, $A_{n+1} \subset A_n$.
+	\section{Lemma 1}
+	For any natural number $n$,
+	\begin{equation}\label{id:1}
+	\cap_{i=1}^n A_i= A_n
+	\end{equation}
+	\paragraph{Proof} By mathematical induction.
+	\paragraph{Initial Step} For $n=1$, identity (\ref{id:1}) reduces to:
+	\begin{center}
+		$A_1 = \cap_{i=1}^1 A_i= A_1$
+	\end{center}	
+	which is true since both sides are equal to $A_1$.
+	\paragraph{Inductive Step} Assume identity (\ref{id:1}) is true for n:
+	\begin{equation}\label{id:2}
+	\cap_{i=1}^n A_i= A_n
+	\end{equation}
+	Take intersection of $A_{n+1}$ on both sides of (\ref{id:2}),
+	\begin{center}
+	$A_{n+1} \cap (\cap_{i=1}^n A_i)= A_{n+1} \cap A_n$
+	\end{center}
+	\begin{equation}\label{id:3}
+	\cap_{i=1}^{n+1} A_i = A_{n+1} \cap A_n
+	\end{equation}
+	From the proof of Claim \ref{claim1}, $A_{n+1} \subset A_n$.  Since all members of $A_{n+1}$ are contained in $A_n$, (\ref{id:3}) reduces to:
+	\begin{center}
+	$\cap_{i=1}^{n+1} A_i= A_{n+1} \cap A_n = A_{n+1}$	
+	\end{center} 
+	which is identity (\ref{id:1}) with $n+1$ in place of $n$.  Hence by the principle of mathematical induction, the identity holds for all $n \in \mathcal{N}$.
+	\section{Lemma 2}
+	\begin{equation}\label{lemma2}
+	|\cap_{i=1}^{n+1} A_i| < |\cap_{i=1}^n A_i|
+	\end{equation}
+	\paragraph{Proof} By Claim 1 and Lemma 1.
+	\par\bigskip
+	From (\ref{id:1}),
+	\begin{center}
+		$\cap_{i=1}^n A_i = A_n, \cap_{i=1}^{n+1} A_i = A_{n+1}$	
+	\end{center} 
+	From Claim \ref{claim1}, $|A_{n+1}| < |A_n|$ since $A_{n+1}$ is a proper subset of $A_n$.  Hence,
+	\begin{center}
+	 $|\cap_{i=1}^{n+1} A_i| = |A_{n+1}| < |A_n| = |\cap_{i=1}^n A_i|$
+\end{center} 
+	\section{Lemma 3}
+	\begin{equation}\label{lemma3}
+	\lim\limits_{n \to \infty} A_n = \emptyset
+	\end{equation}
+	\paragraph{Proof} By definition of limit.
+	\par\bigskip
+	By the definition of $A_n$, its greatest lower bound is 0 for any $n$.  For any given $n$, the lowest upper bound of $A_n$ is $\frac{1}{n}$.  Clearly, $\lim_{n \to \infty} \frac{1}{n} = 0$.  Hence,
+	\begin{center}
+		$\lim\limits_{n \to \infty} A_n = \{x| 0 < x \le \lim\limits_{n \to \infty} \frac{1}{n}\} = \{x| 0 < x \le 0\}$	
+	\end{center} 
+	Since no $x \in \mathcal{R}$ can satisfy $0 < x \le 0$, $\lim\limits_{n \to \infty} A_n = \emptyset$.
+	\section{Proof of Claim 2}
+	Proof by definition of limit.
+	\par\bigskip
+	From Lemma 2, since $\cap_{i=1}^n A_i$ is decreasing in sizes and bound as $n$ increases, the limit for $\cap_{n=1}^\infty A_n$ exists. By definition of limit,
+	\begin{equation}\label{claim2:eq:1}
+		\cap_{n=1}^\infty A_n = \lim_{n \to \infty} \cap_{i=1}^n A_i
+	\end{equation}
+	By Lemmas 1 and 3, (\ref{claim2:eq:1}) reduces to:
+	\begin{equation}\label{claim2:eq:2}
+	\cap_{n=1}^\infty A_n = \lim_{n \to \infty} \cap_{i=1}^n A_i = \lim_{n \to \infty} A_n = \emptyset
+	\end{equation} 
+	\par\bigskip
+	In conclusion, $A_n = \{x|x \in \mathcal{R}, 0 < x \le \frac{1}{n}\}, \forall n \in \mathcal{N}$ have the following properties:
+	\begin{enumerate}
+		\item $A_{n+1} \subset A_n$.
+		\item $\cap_{n=1}^\infty A_n=\emptyset$.
+	\end{enumerate}
+\end{document}

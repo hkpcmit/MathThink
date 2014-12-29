@@ -1,0 +1,24 @@
+\documentclass[14pt]{extarticle}
+\begin{document}
+	\paragraph{Question/Claim}
+	Prove that every odd natural number is of one of the forms $4n+1$ or $4n+3$, where n is an integer.
+	\paragraph{Proof} By Division Theorem and elimination of invalid forms.
+	\par\bigskip
+	By the Division Theorem, any integer can be expressed in one of the following forms:
+	\begin{equation}\label{eq:1}
+	4n, 4n+1, 4n+2, 4n+3, n \in \mathcal{Z}.
+	\end{equation}
+	Since natural numbers are subset of integers, each of them can also be expressed in one of the forms listed in (\ref{eq:1}).
+	\par\bigskip
+	Among those listed in (\ref{eq:1}),
+	\begin{center}
+		$4n = 2(2n)$
+	\end{center}
+	which is clearly even since $2|4n$ is true by definition of divisibility.  Similarly,
+	\begin{center}
+		$4n+2 = 2(2n+1)$
+	\end{center}
+	which is also even since $2|(4n+2)$ is true by definition of divisibility.
+	\par\bigskip
+	Since both $4n, 4n+2$ are even, odd numbers cannot be expressed as such.  Hence, every odd natural number is of one of the remaining forms $4n+1$ or $4n+3, n \in \mathcal{Z}$.
+\end{document}

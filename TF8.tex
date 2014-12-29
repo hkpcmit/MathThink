@@ -1,0 +1,34 @@
+\documentclass[14pt]{extarticle}
+\begin{document}
+	\paragraph{Question/Claim} Prove (from the definition of a limit of a sequence) that if the sequence $\{a_n\}_{n=1}^\infty$ tends to limit $L$ as $n \to\infty$, then for any fixed number $M>0$, the sequence $\{Ma_n\}_{n=1}^\infty$ tends to the limit $ML$.
+	\paragraph{Proof} By definition of limit of sequence.
+	\par\bigskip
+	Given that the sequence $\{a_n\}_{n=1}^\infty$ tends to limit $L$ as $n \to\infty$, the following statement is true by the definition of limit of sequence:
+	\begin{equation}\label{id:0}
+	(\forall \epsilon > 0)(\exists n \in \mathcal{N})(\forall m \ge n)[|a_m -L| < \epsilon]
+	\end{equation}
+	  We shall prove that:
+	\begin{equation}\label{id:target}
+	(\forall \epsilon > 0)(\exists n \in \mathcal{N})(\forall m \ge n)[|Ma_m -ML| < \epsilon]
+	\end{equation}
+	Let $\epsilon > 0$ be given.  Since (\ref{id:0}) is true for any arbitrary $\epsilon > 0$, it is also true for $\frac{\epsilon}{M}$ where $0< \frac{\epsilon}{M} < \epsilon$.  In other words by replacing $\frac{\epsilon}{M}$ with $\epsilon$ in (\ref{id:0}), the following statement is true:
+	\begin{equation}\label{id:1}
+	(\exists n \in \mathcal{N})(\forall m \ge n)[|a_m -L| < \frac{\epsilon}{M}]
+	\end{equation}
+	Pick minimum natural number: $n_0$ that satisfies (\ref{id:1}).  In other words,
+	\begin{equation}\label{id:2}
+	(\forall m \ge n_0)[|a_m -L| < \frac{\epsilon}{M}]
+	\end{equation}
+	By multiplying $M$ to both sides of inequality in (\ref{id:2}):
+	\begin{equation}\label{id:3}
+	(\forall m \ge n_0)[M|a_m -L| < {\epsilon}]
+	\end{equation}
+	Since $M > 0$, (\ref{id:3}) is equivalent to:
+	\begin{center}
+	$(\forall m \ge n_0)[|M(a_m -L)| < {\epsilon}]$
+	\end{center}
+	\begin{equation}\label{id:4}
+	(\forall m \ge n_0)[|Ma_m -ML| < {\epsilon}]
+	\end{equation}
+	For any arbitrary $\epsilon > 0$, (\ref{id:4}) implies (\ref{id:target}).  By the definition of limit of sequence, if the sequence $\{a_n\}_{n=1}^\infty$ tends to limit $L$ as $n \to\infty$, then for any fixed number $M>0$, the sequence $\{Ma_n\}_{n=1}^\infty$ tends to the limit $ML$.
+\end{document}

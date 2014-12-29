@@ -1,0 +1,26 @@
+\documentclass[14pt]{extarticle}
+\begin{document}
+	\paragraph{Question/Claim} Prove that for any natural number n,
+	\begin{equation}\label{eq:0}
+	\sum\limits_{i=1}^n 2^i = 2+2^2+2^3+ ... +2^n=2^{n+1} - 2
+	\end{equation}
+	\paragraph{Proof} By mathematical induction.
+	\paragraph{Initial Step} For $n=1$, the identity (\ref{eq:0}) reduces to:
+	\begin{center}
+		$2 = 2^{1+1}-2 = 4 - 2 = 2$
+	\end{center}
+	which is true since both sides are equal to 2. 
+	\paragraph{Inductive Step} Assume identity (\ref{eq:0}) is true for $n$:
+	\begin{equation}\label{eq:1}
+	\sum\limits_{i=1}^n 2^i =  2^{n+1} - 2 
+	\end{equation}
+	Add $2^{n+1}$ to both sides of (\ref{eq:1}):
+	\begin{equation}\label{eq:2}
+		2^{n+1} + \sum\limits_{i=1}^n 2^i = 2^{n+1} + 2^{n+1} - 2
+	\end{equation}
+	By definition of summation and algebra, (\ref{eq:2}) reduces to:
+	\begin{center}
+		$\sum\limits_{i=1}^{n+1} 2^i = 2*2^{n+1} - 2 = 2^{(n+1)+1}-2$		
+	\end{center}
+	Which is identity (\ref{eq:0}) with $n+1$ in place of $n$.  Hence by the principle of mathematical induction, the identity holds for all $n \in \mathcal{N}$.
+\end{document}

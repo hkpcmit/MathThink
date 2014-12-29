@@ -1,0 +1,20 @@
+\documentclass[14pt]{extarticle}
+\begin{document}
+	\paragraph{Question/Claim} A classic unsolved problem in number theory asks if there are infinitely many pairs of "twin primes", pairs of primes separated by 2, such as 3 and 5, 11 and 13, or 71 and 73. Prove that the only prime triple (i.e. three primes, each 2 from the next) is 3, 5, 7.
+	\section{Lemma}
+	For any integer n, at least one of the integers $n, n+2, n+4$ is divisible by 3.
+	\paragraph{Proof} See proof in Test Flight, Question 5.
+	\section{Proof of Claim}
+	\paragraph{Proof} By contradiction.
+	\par\bigskip
+	Let $S$ be the set of all prime triples.  Since $3, 5, 7$ are valid prime triple, $S$ has at least one members: $|S| \ge 1$.
+	\par\bigskip
+	Let $S'$ be the set of all prime triples excluding $3, 5, 7$:
+	\begin{center}
+	$S' = \{(p, p+2, p+4)|p \in \mathcal{P}, (p+2) \in \mathcal{P}, (p+4) \in \mathcal{P}, p \ge 5\}$
+	\end{center}
+	where $\mathcal{P}$ is set of all primes.
+	\par\bigskip
+	Assume there are more than one prime triples, $|S| > 1$.  This implies $|S'| \ge 1$.
+	Since prime numbers are also integers, the Lemma above implies that for every prime triple in $S'$, at least one of the primes $p, p+2, p+4$ is divisible by 3.  In other words, there exists at least one primes which is at least 5 and divisible by 3.  This contradicts the definition of prime number.  Therefore, $S'$ must be empty set.  This implies that $|S| = 1$, and the only prime triple is 3, 5, 7.
+\end{document}
